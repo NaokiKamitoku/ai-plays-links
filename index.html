@@ -14,21 +14,17 @@
       flex-direction: column;
       align-items: center;
       font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-      padding: 60px 20px 40px;
+      padding: 48px 20px 40px;
     }
 
     .icon {
-      width: 96px;
-      height: 96px;
+      width: 72px;
+      height: 72px;
       border-radius: 50%;
-      border: 3px solid #8b5cf6;
-      box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
-      margin-bottom: 16px;
+      border: 2px solid #8b5cf6;
+      box-shadow: 0 0 16px rgba(139, 92, 246, 0.4);
+      margin-bottom: 12px;
       overflow: hidden;
-      background: #0a0a1a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .icon img {
@@ -38,81 +34,71 @@
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 900;
       letter-spacing: -1px;
       background: linear-gradient(135deg, #00f5ff, #8b5cf6);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .bio {
       color: #888;
-      font-size: 14px;
-      margin-bottom: 36px;
+      font-size: 13px;
+      margin-bottom: 32px;
     }
 
-    .links {
+    .grid {
       width: 100%;
-      max-width: 400px;
+      max-width: 420px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .card {
       display: flex;
       flex-direction: column;
-      gap: 14px;
-    }
-
-    .link-card {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 16px 20px;
       border-radius: 16px;
       border: 1px solid rgba(139, 92, 246, 0.25);
       background: rgba(139, 92, 246, 0.06);
       text-decoration: none;
+      overflow: hidden;
       transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
     }
 
-    .link-card:hover {
-      transform: translateY(-2px);
+    .card:hover {
+      transform: translateY(-3px);
       border-color: rgba(0, 245, 255, 0.5);
-      box-shadow: 0 4px 20px rgba(0, 245, 255, 0.15);
+      box-shadow: 0 6px 24px rgba(0, 245, 255, 0.15);
     }
 
-    .link-card:active {
-      transform: scale(0.98);
+    .card:active {
+      transform: scale(0.97);
     }
 
-    .link-thumb {
-      width: 56px;
-      height: 56px;
-      border-radius: 10px;
+    .card-thumb {
+      width: 100%;
+      aspect-ratio: 9 / 10;
       object-fit: cover;
-      flex-shrink: 0;
-      border: 1px solid rgba(139, 92, 246, 0.3);
     }
 
-    .link-text {
-      flex: 1;
+    .card-body {
+      padding: 12px 14px 14px;
     }
 
-    .link-title {
+    .card-title {
       color: #fff;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
     }
 
-    .link-desc {
+    .card-desc {
       color: #888;
-      font-size: 12px;
-      margin-top: 2px;
-    }
-
-    .link-arrow {
-      color: #555;
-      font-size: 18px;
-      flex-shrink: 0;
+      font-size: 11px;
+      margin-top: 3px;
     }
 
     .footer {
@@ -130,23 +116,21 @@
   <h1>AI PLAYS</h1>
   <p class="bio">AI vs Games</p>
 
-  <div class="links">
-    <a class="link-card" href="https://neon-snake-three.vercel.app/">
-      <img class="link-thumb" src="thumb-snake.png" alt="Neon Snake">
-      <div class="link-text">
-        <div class="link-title">Neon Snake</div>
-        <div class="link-desc">Can you beat the AI?</div>
+  <div class="grid">
+    <a class="card" href="https://neon-snake-three.vercel.app/">
+      <img class="card-thumb" src="thumb-snake.png" alt="Neon Snake">
+      <div class="card-body">
+        <div class="card-title">Neon Snake</div>
+        <div class="card-desc">Can you beat the AI?</div>
       </div>
-      <span class="link-arrow">›</span>
     </a>
 
-    <a class="link-card" href="https://gf-deploy.vercel.app/">
-      <img class="link-thumb" src="thumb-gravity.png" alt="Gravity Flip">
-      <div class="link-text">
-        <div class="link-title">Gravity Flip</div>
-        <div class="link-desc">Can you beat the AI?</div>
+    <a class="card" href="https://gf-deploy.vercel.app/">
+      <img class="card-thumb" src="thumb-gravity.png" alt="Gravity Flip">
+      <div class="card-body">
+        <div class="card-title">Gravity Flip</div>
+        <div class="card-desc">Can you beat the AI?</div>
       </div>
-      <span class="link-arrow">›</span>
     </a>
   </div>
 
