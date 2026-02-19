@@ -84,11 +84,13 @@
       transform: scale(0.98);
     }
 
-    .link-emoji {
-      font-size: 28px;
-      width: 40px;
-      text-align: center;
+    .link-thumb {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      object-fit: cover;
       flex-shrink: 0;
+      border: 1px solid rgba(139, 92, 246, 0.3);
     }
 
     .link-text {
@@ -130,7 +132,7 @@
 
   <div class="links">
     <a class="link-card" href="https://neon-snake-three.vercel.app/">
-      <span class="link-emoji">🐍</span>
+      <img class="link-thumb" src="thumb-snake.png" alt="Neon Snake">
       <div class="link-text">
         <div class="link-title">Neon Snake</div>
         <div class="link-desc">Can you beat the AI?</div>
@@ -139,7 +141,7 @@
     </a>
 
     <a class="link-card" href="https://gravity-flip-tau.vercel.app/">
-      <span class="link-emoji">🔄</span>
+      <img class="link-thumb" src="thumb-gravity.png" alt="Gravity Flip">
       <div class="link-text">
         <div class="link-title">Gravity Flip</div>
         <div class="link-desc">Can you beat the AI?</div>
